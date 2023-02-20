@@ -8,7 +8,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " - REG: " . $row["req_perpus"]. " " . $row["nama"]. " " . $row["STB"]. " " . $row["fklts"]. " " . $row["jrsn"]. " " . $row["almt"]. "  " . $row["email"]. " " . $row["username"]. " " . $row["password"]. " " . $row["level"]. " " . $row["status"]. " " . $row["img"]. " " . $row["daftar"]. " <a href=anggota.php?active=". $row["id"].">link text</a> <br>";
+    echo "id: " . $row["id"]. " - REG: " . $row["req_perpus"]. " " . $row["nama"]. " " . $row["STB"]. " " . $row["fklts"]. " " . $row["jrsn"]. " " . $row["almt"]. "  " . $row["email"]. " " . $row["username"]. " " . $row["password"]. " " . $row["level"]. " " . $row["status"]. " " . $row["img"]. " " . $row["create"]. " <a href=anggota.php?active=". $row["id"].">link text</a> <br>";
   }
 } else {
   echo "0 results";
