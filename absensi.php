@@ -2,9 +2,8 @@
 include "koneksi.php";
 $username = $_REQUEST['username'];
 $foto = $_REQUEST['foto'];
-$date = $_REQUEST['date'];
 
-$sql = "INSERT INTO `absen` (`id`, `username`, `foto`, `date`) VALUES (NULL, '$username', '$foto', '$date')";
+$sql = "INSERT INTO `absen` (`id`, `username`, `foto`, `date`) VALUES (NULL, '$username', '$foto', current_timestamp())";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -14,3 +13,4 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
+
